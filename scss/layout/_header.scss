@@ -1,0 +1,53 @@
+.header {
+    height: 76px;
+    &__logo {
+        color: var(--dark-color);
+        span {
+            padding-right: 0.3rem;
+        }
+    }
+    &__search {
+        position: relative;
+        input[type="text"] {
+            width: 100%;
+            min-width: 350px;
+            padding: 0.2rem 1.2rem;
+            font-size: 1rem;
+            background-color: #ecf0f1;
+            outline: none;
+        }
+        button {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 5px 0 0 5px;
+            left: 0;
+            padding: 0.7rem;
+            background-color: #b2bec3;
+        }
+        i {
+            color: var(--dark-color);
+        }
+    }
+    &__nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 65px;
+        &__search {
+            display: none;
+        }
+        &__login {
+            display: none;
+        }
+        &__nav {
+            display: flex;
+            i {
+                margin-right: 2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
